@@ -1,0 +1,189 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    display: block;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.payment-form-section {
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.payment-form-section .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.payment-form {
+    background-color: #fff;
+    max-width: 337px;
+    width: 100%;
+}
+
+.payment-form  .form-head {
+    padding: 25px;
+    background-color: #efe5aa;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-head .payment-head-title {
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    color: #a6a28d;
+}
+
+.payment-head-title .form-name {
+    font-size: 14px;
+    color: #6e7f7b;
+}
+
+.form-head .form-total-price {
+    font-size: 36px;
+    color: #637570;
+}
+
+.payment-form .form-holder {
+    padding: 45px 25px 20px;
+}
+
+.input-holder {
+    padding-bottom: 30px;
+}
+
+.input-holder:last-child {
+    border-bottom: 1px solid #e3e6e7;
+    margin-bottom: 30px;
+}
+
+.input-label {
+    display: block;
+    font-weight: 400;
+    color: #9eabad;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.input {
+    width: 100%;
+    height: 40px;
+    border: 2px solid #b3c1c4;
+    border-radius: 0;
+    outline: none;
+    transition: all .2s linear;
+}
+
+.input:focus {
+    border-color: #7fcddf;
+}
+
+.input:hover {
+    border-color: #858e91;
+}
+
+.input-holder:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.input-select-holder {
+    width: 100%;
+    padding-right: 8px;
+}
+
+.input-select-holder:last-child {
+    max-width: 95px;
+    margin: 0;
+}
+
+.input-select-holder .input {
+    color: #727f82;
+    font-size: 13px;
+}
+
+.input-holder [for='cvv-code'] {
+    text-transform: uppercase;
+}
+
+.input-holder:nth-child(3) {
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 1px solid #e3e6e7;
+    margin-bottom: 30px;
+}
+
+.input.input-cvv {
+    max-width: 95px;
+    margin-right: 10px;
+}
+
+.input-description {
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-description span,
+.payment-form-section a {
+    font-size: 12px;
+    color: #9eabad;
+    transition: all .1s linear;
+}
+
+.payment-form-section a:hover {
+    color: #b1cbcf;
+}
+
+.button-holder {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.button-holder .btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 0 0 20px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+    background-color: #26b167;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.button-holder .btn:hover,
+.button-holder .btn:focus {
+    background-color: rgb(52, 122, 85);
+    box-shadow: 0 0 3px 0 rgba(0 0 0 / .5);
+}
+
+.button-holder a {
+    display: inline-block;
+}

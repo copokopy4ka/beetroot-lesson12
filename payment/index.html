@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/style.css">
+    <script
+  src=“https://code.jquery.com/jquery-3.6.0.js”
+  integrity=“sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=”
+  crossorigin=“anonymous”></script>
+    <script src="src/js/jQuery-Mask-Plugin-master/src/jquery.mask.js"></script>
+    <script src="src/js/main.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section class="payment-form-section" style="background-image: url(src/img/bg-img.png);">
+            <div class="container">
+                <form action="#" class="payment-form">
+                    <div class="form-head">
+                        <div class="payment-head-title">
+                            <strong class="form-name">Harold Finch</strong>
+                            <span class="form-total">Your Total</span>
+                        </div>
+                        <strong class="form-total-price">$88</strong>
+                    </div>
+                    <div class="form-holder">
+                        <div class="input-holder">
+                            <label for="card" class="input-label">Credit card number</label>
+                            <input type="text" id="card" class="input card-input">
+                        </div>
+                        <div class="input-holder">
+                            <div class="input-select-holder">
+                                <label for="month-select" class="input-label">Expiration date</label>
+                                <select name="month" id="month-select" class="input month-select">
+                                    <option value="0" selected>Month</option>
+                                    <option value="1">June</option>
+                                    <option value="2">July</option>
+                                    <option value="3">August</option>
+                                </select>
+                            </div>
+                            <div class="input-select-holder">
+                                <select name="year-select" id="year-select" class="input year-select">
+                                    <option value="0" selected>Year</option>
+                                    <option value="1">2021</option>
+                                    <option value="2">2020</option>
+                                    <option value="3">2019</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-holder">
+                            <div class="cvv-holder">
+                                <label class="input-label" for="cvv-code">cvv</label>
+                                <input type="text" id="cvv-code" class="input input-cvv">
+                            </div>
+                            <div class="input-description">
+                                <span>3 or 4 digits - </span>
+                                <a href="#">view example</a>
+                            </div>
+                        </div>
+                        <div class="button-holder">
+                            <button class="btn" type="#">Pay</button>
+                            <a href="#">Cancel order</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
