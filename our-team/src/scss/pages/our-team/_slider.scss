@@ -1,24 +1,23 @@
-.our-team-section {
+.our-team {
     padding: 110px 0 90px;
-}
 
-.title-holder {
-    margin-bottom: 40px;
-    text-align: center;
+    &__title-holder {
+        margin-bottom: 40px;
+        text-align: center;
+        }
 
-
-    .subtitle {
+    &__subtitle {
         display: inline-block;
         margin: 0 0 10px;
         font-size: 18px;
         color: $grey;
     }
 
-    .title {
+    &__title {
         color: $yellow;
     }
 
-    .icon-holder {
+    &__icon-holder {
         position: relative;
         font-size: 20px;
         color: $yellow;
@@ -45,40 +44,51 @@
             background-color: $yellow;
         }
     }
-
 }
 
-.slider-holder {
+.slider {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     position: relative;
+    padding: 0 6.66666%;
 
-    .slider-arrow {
+    &__arrow {
         position: absolute;
         top: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: transparent;
-        border: none;
+        border: 1px solid transparent;
+        border-radius: 50%;
         outline: none;
         cursor: pointer;
         width: 50px;
         height: 50px;
+        transition: all .2s linear;
 
-        &.arrow-prew {
-            left: 0;
+        &:hover {
+            border: 1px solid $yellow;
         }
 
-        &.arrow-next {
+        &_prew {
+            left: 0;
+            top: 270px;
+        }
+
+        &_next {
             right: 0;
+            top: 270px;
         }
     }
 
-    .column {
+    &__column {
         padding: 75px 15px;
         width: 50%;
     }
 
-    .slider-img {
+    &__img {
         position: relative;
         padding: 15px;
         max-width: 388px;
@@ -94,7 +104,7 @@
             border-top: 1px solid $yellow;
         }
 
-        &::after {
+        &:after {
             content: '';
             position: absolute;
             top: 0;
@@ -104,203 +114,205 @@
             border-right: 1px solid $yellow;
             border-top: 1px solid $yellow;
         }
+    }
 
-        .img-holder {
-            border: 1px solid $yellow;
+    &__img-holder {
+        border: 1px solid $yellow;
 
-            img {
-                display: block;
-                max-width: 100%;
-            }
+        img {
+            display: block;
+            max-width: 100%;
+        }
+    }
+
+    &__part-border {
+        position: absolute;
+        bottom: 0;
+        width: 100px;
+        height: 100px;
+        border-bottom: 1px solid $yellow;
+
+        &_left {
+            left: 0;
+            border-left: 1px solid $yellow;
         }
 
-        .part-border {
+        &_right {
+            right: 0;
+            border-right: 1px solid $yellow;
+        }
+    }
+
+    &__column {
+
+        &_description {
+            border-left: 1px solid $yellow;
+            text-align: center;
+        }
+    }
+
+
+    &__title {
+        font-size: 36px;
+        font-family: 'roboto';
+        font-weight: 900;
+        color: $dark-grey;
+        margin: 0;
+        padding: 0 0 70px;
+        letter-spacing: .02em;
+        position: relative;
+
+        &:after {
+            content: '';
             position: absolute;
-            bottom: 0;
+            bottom: 35px;
+            left: 50%;
             width: 100px;
-            height: 100px;
-            
-            border-bottom: 1px solid $yellow;
-
-            &.left {
-                left: 0;
-                border-left: 1px solid $yellow;
-            }
-
-            &.right {
-                right: 0;
-                border-right: 1px solid $yellow;
-            }
+            height: 1px;
+            background-color: $yellow;
+            transform: translateX(-50%);
         }
     }
 
-    .slider-description {
-        border-left: 1px solid $yellow;
-        text-align: center;
+    &__description {
+        padding: 0 6.66666%;
+    }
 
+    &__description-title {
+        font-size: 24px;
+        font-weight: 400;
+        color: $dark-grey;
+        padding-bottom: 30px;
+        margin: 0;
+    }
 
-        .slider-title {
-            font-size: 36px;
-            font-family: 'roboto';
-            font-weight: 900;
-            color: $dark-grey;
+    &__social-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 30px;
+    }
+
+    &__social-item {
+        width: 33px;
+        height: 33px;
+        padding: 3px;
+    }
+
+    &__social-link {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 400;
+        color: $light-gray;
+        border: 2px solid $light-gray;
+        border-radius: 50%;
+        transition: all .2s linear;
+
+        &:hover {
+            box-shadow: 0 0 2px 1px rgba(0 0 0 / .5);
+        }
+    }
+
+    &__text-holder {
+        margin-bottom: 25px;
+
+        p {
+            font-size: 14px;
+            color: $black;
             margin: 0;
-            padding: 0 0 70px;
-            letter-spacing: .02em;
-            position: relative;
-
-            &:after {
-                content: '';
-                position: absolute;
-                bottom: 35px;
-                left: 50%;
-                width: 100px;
-                height: 1px;
-                background-color: $yellow;
-                transform: translateX(-50%);
-            }
-        }
-
-        .slider-description-holder {
-            padding: 0 80px;
-
-            .description-title {
-                font-size: 24px;
-                font-weight: 400;
-                color: $dark-grey;
-                padding-bottom: 30px;
-                margin: 0;
-            }
-
-            .social-list {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                list-style: none;
-                margin: 0;
-                padding: 30px;
-
-                .social-item {
-                    width: 33px;
-                    height: 33px;
-                    padding: 3px;
-
-                    .social-link {
-                        height: 100%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        font-size: 14px;
-                        font-weight: 400;
-                        color: $light-gray;
-                        border: 2px solid $light-gray;
-                        border-radius: 50%;
-                        transition: all .2s linear;
-
-                        &:hover {
-                            box-shadow: 0 0 2px 1px rgba(0 0 0 / .5);
-                        }
-                    }
-                }
-            }
-
-            .text-holder {
-                margin-bottom: 25px;
-
-                p {
-                    font-size: 14px;
-                    color: $black;
-                    margin: 0;
-                }
-            }
-
-            .custom-separator {
-                position: relative;
-                width: 20px;
-                height: 5px;
-                background-color: $yellow;
-                margin: 0 auto 25px;
-
-                &:before {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: -15px;
-                    width: 10px;
-                    height: 5px;
-                    background-color: $yellow;
-                }
-
-                &::after {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    right: -15px;
-                    width: 10px;
-                    height: 5px;
-                    background-color: $yellow;
-                }
-            }
-
-            .btn {
-                display: inline-block;
-                outline: none;
-                border: 1px solid $yellow;
-                cursor: pointer;
-                padding: 6px 12px;
-                font-family: 'open sans';
-                font-size: 14px;
-                font-weight: 700;
-                color: $dark-grey;
-                transition: all .2s linear;
-
-                &:hover {
-                    background-color: rgba(255, 204, 0, 0.7);
-                }
-            }
         }
     }
 
-    .slider-nav {
+    &__custom-separator {
+        position: relative;
+        width: 20px;
+        height: 5px;
+        background-color: $yellow;
+        margin: 0 auto 25px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -15px;
+            width: 10px;
+            height: 5px;
+            background-color: $yellow;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -15px;
+            width: 10px;
+            height: 5px;
+            background-color: $yellow;
+        }
+    }
+
+    &__nav {
         padding: 40px 0 90px;
         margin: 0;
         list-style: none;
         display: flex;
         justify-content: space-between;
+    }
 
-        .slider-nav-item {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 12px;
-            height: 12px;
-            margin-right: 10px;
-            padding: 0;
+    &__nav-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 12px;
+        height: 12px;
+        margin-right: 10px;
+        padding: 0;
 
-            &:last-child {
-                margin: 0;
-            }
-
-            .slider-nav-bullet {
-                display: block;
-                width: 90%;
-                height: 90%;
-                border: 1px solid transparent;
-                background-color: $yellow;
-                border-radius: 50%;
-                cursor: pointer;
-                outline: none;
-                transition: all .2s linear;
-                margin: 0;
-                padding: 0;
-
-                &:focus {
-                    background-color: #fff;
-                    border-color: $yellow;
-                    height: 100%;
-                    width: 100%;
-                }
-            }
+        &:last-child {
+            margin: 0;
         }
+    }
+
+    &__nav-bullet {
+        display: block;
+        width: 90%;
+        height: 90%;
+        border: 1px solid transparent;
+        background-color: $yellow;
+        border-radius: 50%;
+        cursor: pointer;
+        outline: none;
+        transition: all .2s linear;
+        margin: 0;
+        padding: 0;
+
+        &:focus {
+            background-color: #fff;
+            border-color: $yellow;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+.btn {
+    display: inline-block;
+    outline: none;
+    border: 1px solid $yellow;
+    cursor: pointer;
+    padding: 6px 12px;
+    font-family: 'open sans';
+    font-size: 14px;
+    font-weight: 700;
+    color: $dark-grey;
+    transition: all .2s linear;
+
+    &:hover {
+        background-color: rgba(255, 204, 0, 0.7);
     }
 }
